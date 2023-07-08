@@ -1,0 +1,6 @@
+first_name,last_name,email,phone,address,is_admin
+John,Doe,johndoe@example.com,1234567890,123 Main St,false
+Jane,Smith,janesmith@example.com,9876543210,456 Elm St,true
+Michael,Johnson,michaeljohnson@example.com,5555555555,789 Oak Ave,false
+Emily,Davis,emilydavis@example.com,1111111111,321 Pine St,false
+David,Anderson,davidanderson@example.com,9999999999,654 Maple Ln,false
