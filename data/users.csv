@@ -1,6 +1,11 @@
 first_name,last_name,email,phone,address,is_admin
+Kim Khanh,Nguyen,kimkhanh@mail.com,68416140,Espoo Finland,true
+Stefanos,Kapsoritakis,stefanos@mail.com,123456789,Helsinki Finland,true
+Zhiyuan,Liu,zhiyuanliu@mail.com,0039102902,Helsinki Finland,true
+Ebizimoh,Abodei,ebizimoh@mail.com,1209301231,Helsinki Finland,true
+Malik Zaryan,Hassan,hassan@mail.com,982090280,Helsinki Finland,true
 John,Doe,johndoe@example.com,1234567890,123 Main St,false
-Jane,Smith,janesmith@example.com,9876543210,456 Elm St,true
+Jane,Smith,janesmith@example.com,9876543210,456 Elm St,false
 Michael,Johnson,michaeljohnson@example.com,5555555555,789 Oak Ave,false
 Emily,Davis,emilydavis@example.com,1111111111,321 Pine St,false
 David,Anderson,davidanderson@example.com,9999999999,654 Maple Ln,false
