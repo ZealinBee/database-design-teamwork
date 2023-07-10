@@ -6,10 +6,10 @@ FAKE API LINK: api.team5ecommerce.co/v1
 
 ### Create a user
 
-You can create a new user by sending an object like the following to /users/
+You can create a new user by sending an object like the following to ``/users/``
 
 Request:
-
+``
 [POST] api.team5ecommerce.co/v1/users
 # Body
 {
@@ -22,7 +22,7 @@ Request:
     "address": "Street Name 32",
     "is_admin": "false",
 }
-
+``
 Response:
 
 {
