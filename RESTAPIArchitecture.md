@@ -363,6 +363,44 @@ Response:
 
     true
 
+### Pagination
+
+APIs that use offset-based paging use the offset and limit query parameters to paginate through items in a collection.
+
+Offset-based pagination is often used where the list of items is of a fixed and predetermined length.
+
+To fetch the first page of entries in a collection, the API needs to be called with the offset set to 0 and the limit the products that you want in the response.
+
+Request:
+
+    [GET] api.team5ecommerce.co/v1/products?offset=0&limit=10
+
+Response:
+
+    [
+        {
+            "id": 1,
+            "title": "Handmade Fresh Table",
+            "price": 687,
+            "description": "Andy shoes are designed to keeping in...",
+            "category": {
+            "id": 5,
+            "name": "Others",
+            "image": "https://placeimg.com/640/480/any?r=0.591926261873231"
+            },
+            "images": [
+            "https://placeimg.com/640/480/any?r=0.9178516507833767",
+            "https://placeimg.com/640/480/any?r=0.9300320592588625",
+            "https://placeimg.com/640/480/any?r=0.8807778235430017"
+            ]
+        }
+        // ... and 9 items more
+    ]
+
+To fetch the next page of entries, the API needs to be called with an offset parameter that equals the sum of the previous offset value and limit returned to the previous result,
+
+To get the next page of entries, use an offset parameter equal to the sum of the previous offset value and the limit returned to the previous result, previous_offset + previous_limit.
+
 [GET] api.team5ecommerce.co/v1/products/:productId/reviews/
 
 ## CATEGORIES
