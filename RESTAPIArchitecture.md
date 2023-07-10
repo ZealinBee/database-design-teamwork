@@ -9,20 +9,20 @@ FAKE API LINK: api.team5ecommerce.co/v1
 You can create a new user by sending an object like the following to ``/users/``
 
 Request:
-``
-[POST] api.team5ecommerce.co/v1/users
-# Body
-{
-    "first_name": "Nicolas",
-    "last_name": "Nicolas",
-    "image": "https://api.lorem.space/image/face?w=640&h=480&r=867",
-    "password": "1234",
-    "email": "nico@gmail.com",
-    "phone": "1234567890",
-    "address": "Street Name 32",
-    "is_admin": "false",
-}
-``
+
+    [POST] api.team5ecommerce.co/v1/users
+    # Body
+    {
+        "first_name": "Nicolas",
+        "last_name": "Nicolas",
+        "image": "https://api.lorem.space/image/face?w=640&h=480&r=867",
+        "password": "1234",
+        "email": "nico@gmail.com",
+        "phone": "1234567890",
+        "address": "Street Name 32",
+        "is_admin": "false",
+    }
+
 Response:
 
 {
