@@ -1,0 +1,9 @@
+first_name,last_name,email,password_hash,email,phone,image,address,is_admin,created_at,modified_at
+Stefanos,Kapsoritakis,-sd&*$#'\:'\sdd,stefan@yahoomail.com,123456789,https://source.unsplash.com/random/?selfie&1,Helsinki Finland,true,2023-07-04 12:20,NULL
+Ebizimoh,Abodei,@1!ut7sdd_=73,ebiz@gmail.com,123383233,https://source.unsplash.com/random/?selfie&1,Oulu Finland,true,2023-07-04 12:20,NULL
+Zhiyuan,Liu,-df%^\:'\sdd,zhi@googlemail.com,12674823,https://source.unsplash.com/random/?selfie&1,Tampere Finland,true,2023-07-04 12:20,NULL
+Malik,Zaryan Hassan,!645%^7jhsd*9fdv,malik@gmail.com,13823683,https://source.unsplash.com/random/?selfie&1,Helsinki Finland,true,2023-07-04 12:20,NULL
+David,James,_sdh^794hhs%sdd,jamesd@test.com,23534345,https://source.unsplash.com/random/?selfie&1,Porvoo Finland,false,2023-07-04 12:20,NULL
+Greg,Denilson,-sd&*$#'\:'\sdd,denilson@yahoo.com,234243534,https://source.unsplash.com/random/?selfie&1,Tallinn Estonia,false,2023-07-04 12:20,NULL
+Kim,Khanh Nguyen,-sd&*$#'\:'\sdd,kimk@gmail.com,3483734434,https://source.unsplash.com/random/?selfie&1,Helsinki Finland,true,2023-07-04 12:20,NULL
+Emerald,Tanko,-sd&*$#'\:'\sdd,michaeljohnson@example.com,3242434334,https://source.unsplash.com/random/?selfie&1,Vantaa Finland,false,2023-07-04 12:20,NULL
