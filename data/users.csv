@@ -1,0 +1,9 @@
+first_name,last_name,email,phone,address,is_admin
+Stefanos,Kapsoritakis,stefan@yahoomail.com,123456789,Helsinki Finland,true
+Ebizimoh,Abodei,ebiz@gmail.com,123383233,Oulu Finland,true
+Zhiyuan,Liu,zhi@googlemail.com,12674823,Tampere Finland,true
+Malik,Zaryan Hassan,malik@gmail.com,13823683,Helsinki Finland,true
+David,James,jamesd@test.com,23534345,Porvoo Finland,false
+Greg,Denilson,denilson@yahoo.com,234243534,Tallinn Estonia,false
+Kim,Khanh Nguyen,kimk@gmail.com,3483734434,Helsinki Finland,true
+Emerald,Tanko,michaeljohnson@example.com,3242434334,Vantaa Finland,false
