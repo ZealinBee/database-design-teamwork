@@ -1,0 +1,4 @@
+user_id,review_text,product_id,created_at,modified_at
+1,Amazing product. Just as described,3,2023-04-30,NULL
+3,Just as expected. Great product,5,2023-04-30,NULL
+4,Nothing to complain about,9,2023-04-30,NULL

@@ -1,13 +1,11 @@
-Peluca,https://picsum.photos/640/640,4,75,"Andy shoes are designed keeping in mind durability as well as trends, the most stylish range of shoes & sandals"
-Awesome Concrete Cheese,https://picsum.photos/640/640,6,32,"The beautiful range of Apple Naturalé has an exciting mix of natural ingredients. With the goodness of 100% natural ingredients"
-Tasty Wooden Chips,https://picsum.photos/640/640,6,32,"The beautiful range of Apple Naturalé has an exciting mix of natural ingredients. With the goodness of 100% natural ingredients"
-Sleek Metal Table,https://picsum.photos/640/640,3,87,"Carbonite web goalkeeper gloves are ergonomically designed to give an easy fit"
-Ergonomic Frozen Car,https://picsum.photos/640/640,2,448,"The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes that started with the 1984 ABC800J"
-Refined Soft Soap,https://picsum.photos/640/640,7,14,"The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life, and modern design"
-Elegant Cotton Keyboard,https://picsum.photos/640/640,2,58,"The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7-Color RGB LED Backlighting for smart functionality"
-Modern Cotton Towels,https://picsum.photos/640/640,1,22,"Boston's most advanced compression wear technology increases muscle oxygenation and stabilizes active muscles"
-Practical Frozen Shoes,https://picsum.photos/640/640,4,57,"The Football Is Good For Training And Recreational Purposes"
-Small Granite Gloves,https://picsum.photos/640/640,1,11,"The beautiful range of Apple Naturalé has an exciting mix of natural ingredients. With the goodness of 100% natural ingredients"
-Fantastic Cotton Computer,https://picsum.photos/640/640,5,34,"The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life, and modern design"
-Oriental Frozen Salad,https://picsum.photos/640/640,6,9,"The Football Is Good For Training And Recreational Purposes"
-Tasty Granite Bacon,https://picsum.photos/640/640,5,36,"New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart"
+product_name,image,price,description,category_id,created_at,modified_at
+Tasty Steel Hat,https://source.unsplash.com/random/?hat&1,45,The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality,10,2023-04-02,NULL
+Gorgeous Rubber Chicken,https://source.unsplash.com/random/?chicken&1,200,The automobile layout consists of a front-engine design with transaxle-type transmissions mounted at the rear of the engine and four wheel drive,2,2023-06-02,NULL
+Luxurious Wooden Computer,https://source.unsplash.com/random/?computer&1,89,Andy shoes are designed to keeping in mind durability as well as trends,3,2023-05-13,NULL
+Electronic Concrete Gloves,https://source.unsplash.com/random/?glove&1,455,The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients With the Goodness of 100% Natural Ingredients,4,2023-03-13,NULL
+Refined Steel Towels,https://source.unsplash.com/random/?towels&1,54,The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality,5,2023-07-02,NULL
+Ergonomic Frozen Bike,https://source.unsplash.com/random/?bike&1,300,Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support,6,2023-01-22,NULL
+Modern Soft Bike,https://source.unsplash.com/random/?bike&1,599,Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support,7,2023-06-30,NULL
+Fantastic Frozen Soap,https://source.unsplash.com/random/?soap&1,230,The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes that started with the 1984 ABC800J,8,2023-03-09,NULL
+Electronic Bronze Pants,https://source.unsplash.com/random/?pants&1,79,The automobile layout consists of a front-engine design with transaxle-type transmissions mounted at the rear of the engine and four wheel drive,9,2023-04-03,NULL
+Elegant Metal Towels,https://source.unsplash.com/random/?towels&1,65,The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality,6,2023-02-28,NULL
