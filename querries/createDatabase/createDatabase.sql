@@ -24,9 +24,15 @@ CREATE TABLE IF NOT EXISTS "E_Commerce".category
 ALTER TABLE IF EXISTS "E_Commerce".category
     OWNER to admin;
 
--- Creates product table
+-- importing data
+COPY E_Commerce.categories (name)
+FROM '/Users/ebizimoh/Documents/Integrify_Files/PostGres_Files/fs15_teamwork/data/categories.csv'
+DELIMITER ','
+CSV HEADER QUOTE '\"'
+NULL 'NULL'
+ESCAPE '''';"";
 
--- DROP TABLE IF EXISTS "E_Commerce".products;
+-- Creates product table, DROP TABLE IF EXISTS "E_Commerce".products;
 
 CREATE TABLE IF NOT EXISTS "E_Commerce".products
 (
@@ -48,6 +54,14 @@ TABLESPACE pg_default;
 ALTER TABLE IF EXISTS "E_Commerce".products
     OWNER to admin;
 
+-- importing data
+COPY E_Commerce.products (product_name, category_id, price, description)
+FROM '/Users/ebizimoh/Documents/Integrify_Files/PostGres_Files/fs15_teamwork/data/products.csv'
+DELIMITER ','
+CSV HEADER QUOTE '\"'
+NULL 'NULL'
+ESCAPE '''';"";
+
 -- Creates User Table
 
 CREATE TABLE IF NOT EXISTS "E_Commerce".users
@@ -64,3 +78,11 @@ CREATE TABLE IF NOT EXISTS "E_Commerce".users
 
 ALTER TABLE IF EXISTS "E_Commerce".users
     OWNER to admin;
+
+-- importing data
+COPY E_Commerce.users (first_name, last_name, email, phone, address, is_admin)
+FROM '/Users/ebizimoh/Documents/Integrify_Files/PostGres_Files/fs15_teamwork/data/users.csv'
+DELIMITER ','
+CSV HEADER QUOTE '\"'
+NULL 'NULL'
+ESCAPE '''';"";
