@@ -39,7 +39,7 @@ Response:
 
 ### Get a single user
 
-You can get a single user by adding the id as a parameter: /users/{id}
+You can get a single user by adding the id as a parameter: ``/users/{id}``
 
 Request:
 
@@ -61,7 +61,7 @@ Response:
 
 ### Update a user
 
-You can update a user exists by sending an object like the following and adding the id as a parameter: /users/{id}
+You can update a user exists by sending an object like the following and adding the id as a parameter: ``/users/{id}``
 
 Request:
 
@@ -93,7 +93,7 @@ Response:
 
 ### Delete a user
 
-You can delete a user by adding the id as a parameter: /users/{id}
+You can delete a user by adding the id as a parameter: ``/users/{id}``
 
 Request:
 
@@ -105,7 +105,7 @@ Response:
 
 ### Get all users as admin
 
-You can access the list of 3 users by using the /users/:userId=admin/users endpoint.
+You can access the list of 3 users by using the ``/users/:userId=admin/users`` endpoint.
 
 Request:
 
@@ -114,23 +114,23 @@ Request:
 Response:
 
     [
-    {
-        "id": 1,
-        "first_name": "Nicolas",
-        "last_name": "Nicolas",
-        "image": "https://api.lorem.space/image/face?w=640&h=480&r=867",
-        "password": "1234",
-        "email": "nico@gmail.com",
-        "phone": "1234567890",
-        "address": "Street Name 32",
-        "is_admin": "false",
-    },
-    // ...
+        {
+            "id": 1,
+            "first_name": "Nicolas",
+            "last_name": "Nicolas",
+            "image": "https://api.lorem.space/image/face?w=640&h=480&r=867",
+            "password": "1234",
+            "email": "nico@gmail.com",
+            "phone": "1234567890",
+            "address": "Street Name 32",
+            "is_admin": "false",
+        },
+        // ...
     ]
 
 ### Create a user as admin
 
-You can create a new user by sending an object like the following to /users/:userId=admin/users
+You can create a new user by sending an object like the following to ``/users/:userId=admin/users``
 
 Request:
 
@@ -163,7 +163,7 @@ Response:
 
 ### Get a single user as admin
 
-You can get a single user by adding the id as a parameter: /users/{id}
+You can get a single user by adding the id as a parameter: ``/users/{id}``
 
 Request:
 
@@ -185,8 +185,7 @@ Response:
 
 ### Update a user as admin 
 
-You can update a user exists by sending an object like the following and adding the id as a parameter: /users/:userId=admin/users/:userId
-
+You can update a user exists by sending an object like the following and adding the id as a parameter: ``/users/:userId=admin/users/:userId``
 Request:
 
     [PUT] api.team5ecommerce.co/v1/users/:userId=admin/users/1
@@ -218,7 +217,7 @@ Response:
 
 ### Delete a user as admin
 
-You can delete a user by adding the id as a parameter: /users/:userId=admin/users/{id}
+You can delete a user by adding the id as a parameter: ``/users/:userId=admin/users/{id}``
 
 Request:
 
@@ -230,14 +229,14 @@ Response:
 
 ### Check the email
 
-You can verify if an email is already registered in the API.
+You can verify if an email is already registered in the API by adding the parameter: ``/users/is-available``
 
 Request:
 
     [POST] api.team5ecommerce.co/v1/users/is-available  
     # Body
     {
-    "email": "newestemail@mail.com",
+        "email": "newestemail@mail.com",
     }
 
 Response:
@@ -250,7 +249,7 @@ Response:
 
 ### Get all products
 
-You can access the list of 200 products by using the /products endpoint.
+You can access the list of 200 products by using the ``/products`` endpoint.
 
 Request:
 
@@ -259,53 +258,53 @@ Request:
 Response:
 
     [
-    {
-        "id": 4,
-        "name": "Handmade Fresh Table",
-        "image": "https://placeimg.com/640/480/any?r=0.9178516507833767"
-        "price": 687,
-        "description": "Greate round ancient table",
-        "category": {
-        "id": 1,
-        "name": "Furniture",
-        },
-    }
-    // ...
+        {
+            "id": 4,
+            "name": "Handmade Fresh Table",
+            "image": "https://placeimg.com/640/480/any?r=0.9178516507833767"
+            "price": 687,
+            "description": "Greate round ancient table",
+            "category": {
+            "id": 1,
+            "name": "Furniture",
+            },
+        }
+        // ...
     ]
 
 ### Create a product
 
-You can create a new product by sending an object like the following to /products/
+You can create a new product by sending an object like the following to ``/products/``
 
 Request:
 
     [POST] api.team5ecommerce.co/v1/products
     # Body
     {
-    "name": "New Product",
-    "image": "https://placeimg.com/640/480/any"
-    "price": 10,
-    "description": "A description",
-    "categoryId": 3,
+        "name": "New Product",
+        "image": "https://placeimg.com/640/480/any"
+        "price": 10,
+        "description": "A description",
+        "categoryId": 3,
     }
 
 Response:
 
     {
-    "name": "New Product",
-    "image": "https://placeimg.com/640/480/any",
-    "price": 10,
-    "description": "A description",
-    "category": {
-        "id": 3,
-        "name": "Clothes",
-    },
-    "id": 210,
+        "name": "New Product",
+        "image": "https://placeimg.com/640/480/any",
+        "price": 10,
+        "description": "A description",
+        "category": {
+            "id": 3,
+            "name": "Clothes",
+        },
+        "id": 210,
     }
 
 ### Get a single product
 
-You can get a single product by adding the id as a parameter: /products/{id}
+You can get a single product by adding the id as a parameter: ``/products/{id}``
 
 Request:
 
@@ -314,47 +313,47 @@ Request:
 Response:
 
     {
-    "id": 3,
-    "title": "Clown Shoe",
-    "images": "https://placeimg.com/640/480/any?r=0.9178516507833767"
-    "price": 12,
-    "description": "Amazing shoe",
-    "category": {
-        "id": 2,
-        "name": "Cloting"
-    },
+        "id": 3,
+        "title": "Clown Shoe",
+        "images": "https://placeimg.com/640/480/any?r=0.9178516507833767"
+        "price": 12,
+        "description": "Amazing shoe",
+        "category": {
+            "id": 2,
+            "name": "Cloting"
+        },
     }
 
 ### Update a product
 
-You can update a product by sending an object like the following and adding the id as a parameter: /products/{id}
+You can update a product by sending an object like the following and adding the id as a parameter: ``/products/{id}``
 
 Request:
 
     [PUT] api.team5ecommerce.co/v1/products/1
     # Body
     {
-    "title": "Change title",
-    "price": 100
+        "title": "Change title",
+        "price": 100
     }
 
 Response:
 
     {
-    "id": 1,
-    "title": "Change title",
-    "image": "https://placeimg.com/640/480/any",
-    "price": 100,
-    "description": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
-    "category": {
-        "id": 2,
-        "name": "Cloting"
-    }
+        "id": 1,
+        "title": "Change title",
+        "image": "https://placeimg.com/640/480/any",
+        "price": 100,
+        "description": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
+        "category": {
+            "id": 2,
+            "name": "Cloting"
+        }
     }
 
 ### Delete a product
 
-You can delete a product by adding the id as a parameter: /products/{id}
+You can delete a product by adding the id as a parameter: ``/products/{id}``
 
 Request:
 
@@ -370,7 +369,7 @@ Response:
 
 ### Get all categories
 
-You can access the list of 5 categories by using the /categories endpoint.
+You can access the list of 5 categories by using the ``/categories`` endpoint.
 
 Request:
 
@@ -379,35 +378,35 @@ Request:
 Response:
 
     [
-    {
-        "id": 1,
-        "name": "Clothes",
-    }
-    // ...
+        {
+            "id": 1,
+            "name": "Clothes",
+        }
+        // ...
     ]
 
 ### Create a category
 
-You can create a new category by sending an object like the following to /categories/
+You can create a new category by sending an object like the following to ``/categories/``
 
 Request:
 
     [POST] api.team5ecommerce.co/v1/categories
     # Body
     {
-    "name": "New Category",
+        "name": "New Category",
     }
 
 Response:
 
     {
-    "name": "New Category",
-    "id": 6
+        "name": "New Category",
+        "id": 6
     }
 
 ### Get a single category
 
-You can get a single category by adding the id as a parameter: /categories/{id}
+You can get a single category by adding the id as a parameter: ``/categories/{id}``
 
 Request:
 
@@ -416,32 +415,32 @@ Request:
 Response:
 
     {
-    "id": 1,
-    "name": "Clothes",
+        "id": 1,
+        "name": "Clothes",
     }
 
 ### Update a category
 
-You can update a category exists by sending an object like the following and adding the id as a parameter: /categories/{id}
+You can update a category exists by sending an object like the following and adding the id as a parameter: ``/categories/{id}``
 
 Request:
 
     [PUT] api.team5ecommerce.co/v1/categories/3
     # Body
     {
-    "name": "Change title"
+        "name": "Change title"
     }
 
 Response:
 
     {
-    "id": 3,
-    "name": "Change title",
+        "id": 3,
+        "name": "Change title",
     }
 
 ### Delete a category
 
-You can delete a category by adding the id as a parameter: /categories/:categoryId
+You can delete a category by adding the id as a parameter: ``/categories/:categoryId``
 
 Request:
 
@@ -453,7 +452,7 @@ Response:
 
 ### Get all products by category
 
-You can get the products by category adding the categoryID as a parameter to /categories/{categoryID}/products
+You can get the products by category adding the categoryID as a parameter to ``/categories/{categoryID}/products``
 
 Request:
 
@@ -462,25 +461,25 @@ Request:
 Response:
 
     [
-    {
-        "id": 4,
-        "title": "Handmade Fresh Table",
-        "images": "https://placeimg.com/640/480/any?r=0.9178516507833767"
-        "price": 687,
-        "description": "Andy shoes are designed to keeping in...",
-        "category": {
-        "id": 1,
-        "name": "Others",
-        },
-    }
-    // ...
+        {
+            "id": 4,
+            "title": "Handmade Fresh Table",
+            "images": "https://placeimg.com/640/480/any?r=0.9178516507833767"
+            "price": 687,
+            "description": "Andy shoes are designed to keeping in...",
+            "category": {
+            "id": 1,
+            "name": "Others",
+            },
+        }
+        // ...
     ]
 
 ## ORDERS
 
 ### Get all order from one user
 
-You can access the order of a user by using the /user/:userId/orders endpoint.
+You can access the order of a user by using the ``/user/:userId/orders`` endpoint.
 
 Request:
 
@@ -489,68 +488,67 @@ Request:
 Response:
 
     [
-    {
-        "order_id": 1,
-        "user_id": 1,
-        "order_details": {
-        "order_id": 1,
-        "product_id": "Shoes",
-        "product_quantity": "1",
-        },
         {
-        "order_id": 1,
-        "product_id": "Gum",
-        "product_quantity": "5",
-        },
-    }
-    // ...
+            "order_id": 1,
+            "user_id": 1,
+            "order_details": {
+            "order_id": 1,
+            "product_id": "Shoes",
+            "product_quantity": "1",
+            },
+            {
+            "order_id": 1,
+            "product_id": "Gum",
+            "product_quantity": "5",
+            },
+        }
+        // ...
     ]
 
 ### Create a order
 
-You can create a new order by sending an object like the following to /users/:userId/orders
+You can create a new order by sending an object like the following to ``/users/:userId/orders``
 
 Request:
 
     [POST] api.team5ecommerce.co/v1/users/:userId/orders
     # Body
     {
-    
-    {
-        "user_id": 1,
-        "order_details": {
-        "order_id": 2,
-        "product_id": "Chair",
-        "product_quantity": "4",
-        },
         {
-        "order_id": 2,
-        "product_id": "Table",
-        "product_quantity": "1",
-        },
-    }
+            "user_id": 1,
+            "order_details": {
+            "order_id": 2,
+            "product_id": "Chair",
+            "product_quantity": "4",
+            },
+            {
+            "order_id": 2,
+            "product_id": "Table",
+            "product_quantity": "1",
+            },
+        }
     }
 
 Response:
 
     {
-    "user_id": 1,
-        "order_details": {
-        "order_id": 2,
-        "product_id": "Chair",
-        "product_quantity": "4",
-        },
-        {
-        "order_id": 2,
-        "product_id": "Table",
-        "product_quantity": "1",
-        },
+        "user_id": 1,
+            "order_details": {
+            "order_id": 2,
+            "product_id": "Chair",
+            "product_quantity": "4",
+            },
+            {
+            "order_id": 2,
+            "product_id": "Table",
+            "product_quantity": "1",
+            },
         "order_id": 2,
     }
 
 ### Get all order detail from a single order
 
-You can access the order detail of a single order by using the /users/:userId/orders/{id}endpoint.
+You can access the order detail of a single order by using the ``/users/:userId/orders/{id}`` endpoint.
 
 Request:
 
@@ -573,7 +571,7 @@ Response:
 
 ### Cancel an order
 
-You can cancel an order by adding the id as a parameter: /users/:userId/orders/{id}
+You can cancel an order by adding the id as a parameter: ``/users/:userId/orders/{id}``
 
 Request:
 
@@ -587,7 +585,7 @@ Response:
 
 ### Get all products in inventory
 
-You can access the inventory by using the /users/:userId=admin/inventory
+You can access the inventory by using the ``/users/:userId=admin/inventory``
 
 Request:
 
@@ -596,16 +594,16 @@ Request:
 Response:
 
     [
-    {
-        "product_id": 1,
-        "quantity": "26"
-    }
-    // ...
+        {
+            "product_id": 1,
+            "quantity": "26"
+        }
+        // ...
     ]
 
 ### Add product to inventory
 
-You can add a product to inventory by sending an object like the following to /users/:userId=admin/inventory
+You can add a product to inventory by sending an object like the following to ``/users/:userId=admin/inventory``
 
 Request:
 
@@ -625,7 +623,7 @@ Response:
 
 ### Get a single product in inventory
 
-You can get a single product in inventory by adding the id as a parameter: /products/{id}
+You can get a single product in inventory by adding the id as a parameter: ``/products/{id}``
 
 Request:
 
@@ -634,34 +632,34 @@ Request:
 Response:
 
     {
-    "product_id": 4,
-    "quantity": "9"
+        "product_id": 4,
+        "quantity": "9"
     }
 
 ### Update a product in inventory
  
-You can update a product by sending an object like the following and adding the id as a parameter: /users/:userId=admin/inventory/{id}
+You can update a product by sending an object like the following and adding the id as a parameter: ``/users/:userId=admin/inventory/{id}``
 
 Request:
 
     [PUT] api.team5ecommerce.co/v1/users/:userId=admin/inventory/:productId
     # Body
     {
-    "product_id": 16,
-    "quantity": "7"
+        "product_id": 16,
+        "quantity": "7"
     }
 
 Response:
 
     {
-    "product_id": 16,
-    "quantity": "7"
+        "product_id": 16,
+        "quantity": "7"
     }
 
 
 ### Delete a product in inventory
 
-You can delete a product by adding the id as a parameter: /users/:userId=admin/inventory/{id}
+You can delete a product by adding the id as a parameter: ``/users/:userId=admin/inventory/{id}``
 
 Request:
 
