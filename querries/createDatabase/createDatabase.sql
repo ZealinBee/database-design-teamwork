@@ -63,7 +63,7 @@ ESCAPE '''';"";
 
 -- DROP TABLE IF EXISTS ecommerce."user";
 
-CREATE TABLE IF NOT EXISTS ecommerce."user"
+CREATE TABLE IF NOT EXISTS ecommerce.user
 (
     user_id integer NOT NULL DEFAULT nextval('ecommerce.user_user_id_seq'::regclass),
     first_name character varying(50) COLLATE pg_catalog."default" NOT NULL,
@@ -81,7 +81,7 @@ CREATE TABLE IF NOT EXISTS ecommerce."user"
 
 TABLESPACE pg_default;
 
-ALTER TABLE IF EXISTS ecommerce."user"
+ALTER TABLE IF EXISTS ecommerce.user
     OWNER to admin;
 
 -- importing data
@@ -94,7 +94,7 @@ ESCAPE '''';"";
 
 -- DROP TABLE IF EXISTS ecommerce."order";
 
-CREATE TABLE IF NOT EXISTS ecommerce."order"
+CREATE TABLE IF NOT EXISTS ecommerce.order
 (
     order_id integer NOT NULL DEFAULT nextval('ecommerce.order_order_id_seq'::regclass),
     user_id integer NOT NULL,
@@ -102,14 +102,14 @@ CREATE TABLE IF NOT EXISTS ecommerce."order"
     modified_at date,
     CONSTRAINT order_pkey PRIMARY KEY (order_id),
     CONSTRAINT user_id_fk FOREIGN KEY (user_id)
-        REFERENCES ecommerce."user" (user_id) MATCH SIMPLE
+        REFERENCES ecommerce.user (user_id) MATCH SIMPLE
         ON UPDATE CASCADE
         ON DELETE CASCADE
 )
 
 TABLESPACE pg_default;
 
-ALTER TABLE IF EXISTS ecommerce."order"
+ALTER TABLE IF EXISTS ecommerce.order
     OWNER to admin;
 
 
@@ -151,7 +151,7 @@ CREATE TABLE IF NOT EXISTS ecommerce.order_details
     created_at date,
     modified_at date,
     CONSTRAINT order_id_fk FOREIGN KEY (order_id)
-        REFERENCES ecommerce."order" (order_id) MATCH SIMPLE
+        REFERENCES ecommerce.order (order_id) MATCH SIMPLE
         ON UPDATE CASCADE
         ON DELETE CASCADE
         NOT VALID,
@@ -182,7 +182,7 @@ CREATE TABLE IF NOT EXISTS ecommerce.review
         ON UPDATE CASCADE
         ON DELETE CASCADE,
     CONSTRAINT user_id FOREIGN KEY (user_id)
-        REFERENCES ecommerce."user" (user_id) MATCH SIMPLE
+        REFERENCES ecommerce.user (user_id) MATCH SIMPLE
         ON UPDATE CASCADE
         ON DELETE CASCADE
 )
