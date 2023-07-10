@@ -185,7 +185,7 @@ Response:
 
 ### Update a user as admin 
 
-You can update a user exists by sending an object like the following and adding the id as a parameter: ``/users/:userId=admin/users/:userId``
+You can update a user exists by sending an object like the following and adding the id as a parameter: ``/users/:userId=admin/users/{id}``
 Request:
 
     [PUT] api.team5ecommerce.co/v1/users/:userId=admin/users/1
@@ -440,7 +440,7 @@ Response:
 
 ### Delete a category
 
-You can delete a category by adding the id as a parameter: ``/categories/:categoryId``
+You can delete a category by adding the id as a parameter: ``/categories/{id}``
 
 Request:
 
@@ -452,7 +452,7 @@ Response:
 
 ### Get all products by category
 
-You can get the products by category adding the categoryID as a parameter to ``/categories/{categoryID}/products``
+You can get the products by category adding the categoryID as a parameter to ``/categories/{id}/products``
 
 Request:
 
@@ -479,11 +479,11 @@ Response:
 
 ### Get all order from one user
 
-You can access the order of a user by using the ``/user/:userId/orders`` endpoint.
+You can access the order of a user by using the ``/user/{id}/orders`` endpoint.
 
 Request:
 
-    [GET] api.team5ecommerce.co/v1/user/:userId/orders
+    [GET] api.team5ecommerce.co/v1/user/1/orders
 
 Response:
 
@@ -507,11 +507,11 @@ Response:
 
 ### Create a order
 
-You can create a new order by sending an object like the following to ``/users/:userId/orders``
+You can create a new order by sending an object like the following to ``/users/{id}/orders``
 
 Request:
 
-    [POST] api.team5ecommerce.co/v1/users/:userId/orders
+    [POST] api.team5ecommerce.co/v1/users/1/orders
     # Body
     {
         {
@@ -548,7 +548,7 @@ Response:
 
 ### Get all order detail from a single order
 
-You can access the order detail of a single order by using the ``/users/:userId/orders/{id}`` endpoint.
+You can access the order detail of a single order by using the ``/users/{id}/orders/{id}`` endpoint.
 
 Request:
 
@@ -571,7 +571,7 @@ Response:
 
 ### Cancel an order
 
-You can cancel an order by adding the id as a parameter: ``/users/:userId/orders/{id}``
+You can cancel an order by adding the id as a parameter: ``/users/{id}/orders/{id}``
 
 Request:
 
@@ -642,7 +642,7 @@ You can update a product by sending an object like the following and adding the 
 
 Request:
 
-    [PUT] api.team5ecommerce.co/v1/users/:userId=admin/inventory/:productId
+    [PUT] api.team5ecommerce.co/v1/users/:userId=admin/inventory/16
     # Body
     {
         "product_id": 16,
