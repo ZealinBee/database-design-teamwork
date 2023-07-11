@@ -99,6 +99,7 @@ CREATE TABLE IF NOT EXISTS ecommerce.order
 (
     order_id integer NOT NULL DEFAULT nextval('ecommerce.order_order_id_seq'::regclass),
     user_id integer NOT NULL,
+    subtotal numeric NOT NULL,
     created_at date,
     modified_at date,
     CONSTRAINT order_pkey PRIMARY KEY (order_id),
