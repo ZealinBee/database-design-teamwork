@@ -66,17 +66,18 @@ ESCAPE '''';"";
 CREATE TABLE IF NOT EXISTS ecommerce.user
 (
     user_id integer NOT NULL DEFAULT nextval('ecommerce.user_user_id_seq'::regclass),
-    first_name character varying(50) COLLATE pg_catalog."default" NOT NULL,
-    last_name character varying(50) COLLATE pg_catalog."default" NOT NULL,
-    password_hash character varying(200) COLLATE pg_catalog."default" NOT NULL,
-    email character varying(50) COLLATE pg_catalog."default" NOT NULL,
-    phone character varying(20) COLLATE pg_catalog."default" NOT NULL,
-    image character varying(200) COLLATE pg_catalog."default" NOT NULL,
-    address character varying(150) COLLATE pg_catalog."default" NOT NULL,
+    first_name character varying(50) NOT NULL,
+    last_name character varying(50) NOT NULL,
+    password_hash character varying(200) NOT NULL,
+    email character varying(50) NOT NULL,
+    phone character varying(20) NOT NULL,
+    image character varying(200) NOT NULL,
+    address character varying(150) NOT NULL,
     is_admin boolean NOT NULL,
     created_at date,
     modified_at date,
-    CONSTRAINT user_pkey PRIMARY KEY (user_id)
+    CONSTRAINT user_pkey PRIMARY KEY (user_id),
+    CONSTRAINT user_email_unique UNIQUE (email)
 )
 
 TABLESPACE pg_default;
