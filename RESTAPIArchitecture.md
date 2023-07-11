@@ -6,7 +6,7 @@ FAKE API LINK: api.team5ecommerce.co/v1
 
 ### Create a user
 
-You can create a new user by sending an object like the following to ``/users/``
+You can create a new user by sending an object like the following to ``/users``
 
 Request:
 
@@ -274,7 +274,7 @@ Response:
 
 ### Create a product
 
-You can create a new product by sending an object like the following to ``/products/``
+You can create a new product by sending an object like the following to ``/products``
 
 Request:
 
@@ -390,7 +390,6 @@ Response:
             },
             "images": [
             "https://placeimg.com/640/480/any?r=0.9178516507833767",
-            "https://placeimg.com/640/480/any?r=0.9300320592588625",
             "https://placeimg.com/640/480/any?r=0.8807778235430017"
             ]
         }
@@ -401,7 +400,7 @@ To fetch the next page of entries, the API needs to be called with an offset par
 
 To get the next page of entries, use an offset parameter equal to the sum of the previous offset value and the limit returned to the previous result, previous_offset + previous_limit.
 
-[GET] api.team5ecommerce.co/v1/products/:productId/reviews/
+[GET] api.team5ecommerce.co/v1/products/:productId/reviews
 
 ## CATEGORIES
 
@@ -425,7 +424,7 @@ Response:
 
 ### Create a category
 
-You can create a new category by sending an object like the following to ``/categories/``
+You can create a new category by sending an object like the following to ``/categories``
 
 Request:
 
