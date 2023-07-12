@@ -178,3 +178,21 @@ BEGIN
     RETURN;
 END;
 $$ LANGUAGE plpgsql;
+
+CREATE OR REPLACE FUNCTION get_10_most_bought_products()
+RETURN SETOF product AS $$
+BEGIN 
+    RETURN QUERY
+    SELECT * 
+    FROM ecommerce.product
+    WHERE product_id IN (
+        SELECT product_id
+        FROM ecommerce.order_details
+        GROUP BY product_id
+        ORDER BY SUM(product_quantity) DESC
+        LIMIT 10
+    );
+END;
+
+END;
+$$ LANGUAGE plpgsql;
