@@ -179,8 +179,10 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
+-- Function to get 10 most bought products
+-- Test it by running SELECT * FROM get_10_most_bought_products();
 CREATE OR REPLACE FUNCTION get_10_most_bought_products()
-RETURN SETOF product AS $$
+RETURNS SETOF ecommerce.product AS $$
 BEGIN 
     RETURN QUERY
     SELECT * 
@@ -192,7 +194,5 @@ BEGIN
         ORDER BY SUM(product_quantity) DESC
         LIMIT 10
     );
-END;
-
 END;
 $$ LANGUAGE plpgsql;
