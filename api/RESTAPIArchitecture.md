@@ -39,7 +39,7 @@ Response:
 
 ### Get a single user
 
-You can get a single user by adding the id as a parameter: ``/users/{id}``
+You can get a single user by adding the id as a parameter: ``/users/{user_id}``
 
 Request:
 
@@ -61,7 +61,7 @@ Response:
 
 ### Update a user
 
-You can update a user exists by sending an object like the following and adding the id as a parameter: ``/users/{id}``
+You can update a user exists by sending an object like the following and adding the id as a parameter: ``/users/{user_id}``
 
 Request:
 
@@ -93,7 +93,7 @@ Response:
 
 ### Delete a user
 
-You can delete a user by adding the id as a parameter: ``/users/{id}``
+You can delete a user by adding the id as a parameter: ``/users/{user_id}``
 
 Request:
 
@@ -105,11 +105,11 @@ Response:
 
 ### Get all users as admin
 
-You can access the list of 3 users by using the ``/users/:userId=admin/users`` endpoint.
+You can access the list of 3 users by using the ``/users/{:userId=admin}/users`` endpoint.
 
 Request:
 
-    [GET] api.team5ecommerce.co/v1/users/:userId=admin/users
+    [GET] api.team5ecommerce.co/v1/users/1/users
 
 Response:
 
@@ -130,11 +130,11 @@ Response:
 
 ### Create a user as admin
 
-You can create a new user by sending an object like the following to ``/users/:userId=admin/users``
+You can create a new user by sending an object like the following to ``/users/{:userId=admin}/users``
 
 Request:
 
-    [POST] api.team5ecommerce.co/v1/users/:userId=admin/users
+    [POST] api.team5ecommerce.co/v1/users/1/users
     # Body
     {
         "first_name": "Nicolas",
@@ -163,11 +163,11 @@ Response:
 
 ### Get a single user as admin
 
-You can get a single user by adding the id as a parameter: ``/users/{id}``
+You can get a single user by adding the id as a parameter: ``/user/{:userId=admin}/users/1``
 
 Request:
 
-    [GET] api.team5ecommerce.co/v1/user/:userId=admin/users/1
+    [GET] api.team5ecommerce.co/v1/user/1/users/1
 
 Response:
 
@@ -185,10 +185,10 @@ Response:
 
 ### Update a user as admin 
 
-You can update a user exists by sending an object like the following and adding the id as a parameter: ``/users/:userId=admin/users/{id}``
+You can update a user exists by sending an object like the following and adding the id as a parameter: ``/users/{:userId=admin}/users/{user_id}``
 Request:
 
-    [PUT] api.team5ecommerce.co/v1/users/:userId=admin/users/1
+    [PUT] api.team5ecommerce.co/v1/users/1/users/1
     # Body
     {
         "first_name": "New",
@@ -217,11 +217,11 @@ Response:
 
 ### Delete a user as admin
 
-You can delete a user by adding the id as a parameter: ``/users/:userId=admin/users/{id}``
+You can delete a user by adding the id as a parameter: ``/users/{:userId=admin}/users/{user_id}``
 
 Request:
 
-    [DELETE] api.team5ecommerce.co/v1/users/:userId=admin/users/1
+    [DELETE] api.team5ecommerce.co/v1/users/1/users/1
 
 Response:
 
@@ -304,7 +304,7 @@ Response:
 
 ### Get a single product
 
-You can get a single product by adding the id as a parameter: ``/products/{id}``
+You can get a single product by adding the id as a parameter: ``/products/{product_id}``
 
 Request:
 
@@ -326,7 +326,7 @@ Response:
 
 ### Update a product
 
-You can update a product by sending an object like the following and adding the id as a parameter: ``/products/{id}``
+You can update a product by sending an object like the following and adding the id as a parameter: ``/products/{product_id}``
 
 Request:
 
@@ -353,7 +353,7 @@ Response:
 
 ### Delete a product
 
-You can delete a product by adding the id as a parameter: ``/products/{id}``
+You can delete a product by adding the id as a parameter: ``/products/{product_id}``
 
 Request:
 
@@ -443,7 +443,7 @@ Response:
 
 ### Get a single category
 
-You can get a single category by adding the id as a parameter: ``/categories/{id}``
+You can get a single category by adding the id as a parameter: ``/categories/{category_id}``
 
 Request:
 
@@ -458,7 +458,7 @@ Response:
 
 ### Update a category
 
-You can update a category exists by sending an object like the following and adding the id as a parameter: ``/categories/{id}``
+You can update a category exists by sending an object like the following and adding the id as a parameter: ``/categories/{category_id}``
 
 Request:
 
@@ -477,7 +477,7 @@ Response:
 
 ### Delete a category
 
-You can delete a category by adding the id as a parameter: ``/categories/{id}``
+You can delete a category by adding the id as a parameter: ``/categories/{category_id}``
 
 Request:
 
@@ -489,7 +489,7 @@ Response:
 
 ### Get all products by category
 
-You can get the products by category adding the categoryID as a parameter to ``/categories/{id}/products``
+You can get the products by category adding the categoryID as a parameter to ``/categories/{category_id}/products``
 
 Request:
 
@@ -516,7 +516,7 @@ Response:
 
 ### Get all order from one user
 
-You can access the order of a user by using the ``/user/{id}/orders`` endpoint.
+You can access the order of a user by using the ``/user/{user_id}/orders`` endpoint.
 
 Request:
 
@@ -544,7 +544,7 @@ Response:
 
 ### Create a order
 
-You can create a new order by sending an object like the following to ``/users/{id}/orders``
+You can create a new order by sending an object like the following to ``/users/{user_id}/orders``
 
 Request:
 
@@ -585,7 +585,7 @@ Response:
 
 ### Get all order detail from a single order
 
-You can access the order detail of a single order by using the ``/users/{id}/orders/{id}`` endpoint.
+You can access the order detail of a single order by using the ``/users/{user_id}/orders/{order_id}`` endpoint.
 
 Request:
 
@@ -608,7 +608,7 @@ Response:
 
 ### Cancel an order
 
-You can cancel an order by adding the id as a parameter: ``/users/{id}/orders/{id}``
+You can cancel an order by adding the id as a parameter: ``/users/{user_id}/orders/{order_id}``
 
 Request:
 
@@ -622,11 +622,11 @@ Response:
 
 ### Get all products in inventory
 
-You can access the inventory by using the ``/users/:userId=admin/inventory``
+You can access the inventory by using the ``/users/{:userId=admin}/inventory``
 
 Request:
 
-    [GET] api.team5ecommerce.co/v1/users/:userId=admin/inventory
+    [GET] api.team5ecommerce.co/v1/users/1/inventory
 
 Response:
 
@@ -640,11 +640,11 @@ Response:
 
 ### Add product to inventory
 
-You can add a product to inventory by sending an object like the following to ``/users/:userId=admin/inventory``
+You can add a product to inventory by sending an object like the following to ``/users/{:userId=admin}/inventory``
 
 Request:
 
-    [POST] api.team5ecommerce.co/v1/users/:userId=admin/inventory
+    [POST] api.team5ecommerce.co/v1/users/1/inventory
     # Body
     {
         "product_id": 4,
@@ -660,7 +660,7 @@ Response:
 
 ### Get a single product in inventory
 
-You can get a single product in inventory by adding the id as a parameter: ``/products/{id}``
+You can get a single product in inventory by adding the id as a parameter: ``/products/{product_id}``
 
 Request:
 
@@ -675,7 +675,7 @@ Response:
 
 ### Update a product in inventory
  
-You can update a product by sending an object like the following and adding the id as a parameter: ``/users/:userId=admin/inventory/{id}``
+You can update a product by sending an object like the following and adding the id as a parameter: ``/users/{:userId=admin}/inventory/{product_id}``
 
 Request:
 
@@ -696,11 +696,11 @@ Response:
 
 ### Delete a product in inventory
 
-You can delete a product by adding the id as a parameter: ``/users/:userId=admin/inventory/{id}``
+You can delete a product by adding the id as a parameter: ``/users/{:userId=admin}/inventory/{product_id}``
 
 Request:
 
-    [DELETE] api.team5ecommerce.co/v1/users/:userId=admin/inventory/2
+    [DELETE] api.team5ecommerce.co/v1/users/1/inventory/2
 
 Response:
 
