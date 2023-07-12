@@ -707,3 +707,115 @@ Response:
     true
 
 ## REVIEWS
+
+### Get all reviews from a single user
+
+You can get all reviews from a single user by using user_id as a parameter: ``/users/{user_id}/reviews``
+
+Request:
+
+    [GET] api.team5ecommerce.co/v1/users/1/reviews
+    # Body
+    {
+        "user_id": 1
+    }
+
+Response:
+
+    [
+        {
+            "review_id": 1,
+            "user_id": "1",
+            "review_text": "Highly recommended",
+            "product_id": "5",
+            "created_at": "2023-6-1",
+            "modified_at": "2023-6-2"
+        },
+        // ...
+    ]
+
+### Get a single review from a user
+
+You can get a single review from a user by using user_id and review_id as parameters: `/users/{user_id}/reviews/{review_id}`
+
+Request:
+
+    [GET] api.team5ecommerce.co/v1/users/1/reviews/2
+    # Body
+    {
+        "user_id": 1,
+        "review_id": 2
+    }
+
+Response:
+
+    {
+        "review_id": 2,
+        "user_id": "1",
+        "review_text": "Highly recommended",
+        "product_id": "5",
+        "created_at": "2023-6-1",
+        "modified_at": "2023-6-2"
+    }
+
+### Create new review
+
+You can create new review by sending an object like below using user_id & product_id as parameters to `/users/{user_id}/reviews`
+
+Request:
+
+    [POST] api.team5ecommerce.co/v1/users/1/reviews
+    # Body
+    {
+        {
+            "user_id": 1,
+            "review_text": "Highly recommended",
+            "product_id": "5"
+        }
+    }
+
+Response:
+
+    {
+        "review_id": 3,
+        "user_id": "1",
+        "review_text": "Highly recommended",
+        "product_id": "5",
+        "created_at": "2023-6-1",
+        "modified_at": "2023-6-2"
+    }
+
+### Update/Modify a review 
+
+You can update a review sending an object like below using user_id, review_id as parameters to `/users/{user_id}/reviews/{review_id}`
+
+Request:
+
+    [PUT] api.team5ecommerce.co/v1/users/1/reviews/1
+    # Body
+    {
+        "review_text": "Highly recommended, I would buy it again"
+    }
+
+Response:
+
+    {
+        "review_id": 1,
+        "user_id": "1",
+        "review_text": "Highly recommended, I would buy it again",
+        "product_id": "5",
+        "created_at": "2023-6-1",
+        "modified_at": "2023-6-3"
+    }
+
+### Delete a review
+
+You can delete a review by sending user_id & review_id as parameters to `/users/{user_id}/reviews/{review_id}`
+
+Request:
+
+    [DELETE] api.team5ecommerce.co/v1/users/1/reviews/1
+
+Response:
+
+    true 
