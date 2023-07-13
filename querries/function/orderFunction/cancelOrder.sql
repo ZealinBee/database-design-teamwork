@@ -13,7 +13,7 @@ DECLARE
 BEGIN
     -- Get the user ID for the order
     SELECT user_id INTO v_order_user_id
-    FROM ecommerce."order"
+    FROM ecommerce.order
     WHERE order_id = p_order_id;
     
     -- Check if the user is the one who made the order
@@ -25,7 +25,7 @@ BEGIN
         
         -- Get the subtotal for the canceled order from the order table
         SELECT subtotal INTO v_subtotal
-        FROM ecommerce."order"
+        FROM ecommerce.order
         WHERE order_id = p_order_id;
         
         -- Delete order details associated with the canceled order
@@ -39,19 +39,27 @@ BEGIN
         WHERE product_id = v_product_id;
         
         -- Update the subtotal for the canceled order
-        UPDATE ecommerce."order"
+        UPDATE ecommerce.order
         SET subtotal = subtotal - v_subtotal,
             modified_at = CURRENT_DATE
         WHERE order_id = p_order_id;
         
         -- Delete the canceled order from the order table
-        DELETE FROM ecommerce."order"
+        DELETE FROM ecommerce.order
         WHERE order_id = p_order_id;
+        
+        RAISE NOTICE 'Order canceled successfully.';
+    ELSE
+        RAISE EXCEPTION 'Invalid order ID or user ID.';
     END IF;
     
     RETURN;
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        RAISE EXCEPTION 'Invalid order ID or user ID.';
 END;
 $$ LANGUAGE plpgsql;
+
 
 
 -- Will delete entry from "order" table by order_id
