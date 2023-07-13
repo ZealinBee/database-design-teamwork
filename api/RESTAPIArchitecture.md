@@ -269,11 +269,11 @@ The response is an access and refresh JWT tokens, like this:
 
 ### Get user with session
 
-You can get the profile the current user with session if in the headers include the Authorization key with the value Bearer {your access token} to /auth/profile
+You can get the profile the current user with session if in the headers include the Authorization key with the value Bearer ``{your access token}`` to ``/auth/profile``
 
 Request:
 
-    [GET] https://api.escuelajs.co/api/v1/auth/profile
+    [GET] api.team5ecommerce.co/v1/auth/profile
     # Headers
     {
         "Authorization": "Bearer {your access token}"
@@ -292,9 +292,11 @@ Response:
 
 ### Get a new Access Token with a Refresh Token
 
+You can get a new Access Token with a Refresh Token by adding the parameter ``/auth/refresh-token``
+
 Request:
 
-    [POST] https://api.escuelajs.co/api/v1/auth/refresh-token
+    [POST] api.team5ecommerce.co/v1/auth/refresh-token
     # Body
     {
         "refreshToken": "{your refresh token}"
