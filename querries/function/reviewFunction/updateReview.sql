@@ -15,7 +15,8 @@ BEGIN
     ELSE
         UPDATE ecommerce.review
         SET
-            review_text = reviewText
+            review_text = reviewText,
+            modified_at = CURRENT_DATE
         WHERE
             user_id = userId
             AND review_id = reviewId;
