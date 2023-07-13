@@ -5,7 +5,7 @@
 -- SELECT * FROM get_all_reviews('review', 'review_id', 'ASC', 'user_id', '1', 0, 10); -- This will return the review with user_id = 1
 -- SELECT * FROM get_all_reviews('review', 'review_id', 'ASC', NULL, NULL, 0, 10); -- This will return all reviews and sort by review_id and limit the result to 10
 
-CREATE OR REPLACE FUNCTION get_all_reviews(
+CREATE OR REPLACE FUNCTION ecommerce.get_all_reviews(
     _table_name TEXT,
     _sort_column TEXT DEFAULT 'review_id',
     _sort_order TEXT DEFAULT 'ASC',

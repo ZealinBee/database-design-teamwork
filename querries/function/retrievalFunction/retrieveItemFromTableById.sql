@@ -1,6 +1,6 @@
 -- Function to get one item of a table by id
 
-CREATE OR REPLACE FUNCTION get_item_by_tablename_id(
+CREATE OR REPLACE FUNCTION ecommerce.get_item_by_tablename_id(
     table_name TEXT,
     id INT
 )

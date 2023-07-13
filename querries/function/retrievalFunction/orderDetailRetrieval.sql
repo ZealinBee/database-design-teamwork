@@ -3,7 +3,7 @@
 -- Test the below function by:
 -- SELECT * FROM get_all_order_details('order_details', 'order_id', 'ASC', 'order_id', '1', 0, 10); -- This will return the order_details with order_id = 1
 
-CREATE OR REPLACE FUNCTION get_all_order_details(
+CREATE OR REPLACE FUNCTION ecommerce.get_all_order_details(
     _table_name TEXT,
     _sort_column TEXT DEFAULT 'order_id',
     _sort_order TEXT DEFAULT 'ASC',

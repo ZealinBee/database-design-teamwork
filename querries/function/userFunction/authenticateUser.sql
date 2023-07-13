@@ -5,6 +5,8 @@ CREATE OR REPLACE FUNCTION authenticate_user(
     auth_password TEXT
 )
 RETURNS BOOLEAN AS $$
+DECLARE
+    old_password_hash TEXT;
 BEGIN
     SELECT password_hash
     INTO old_password_hash

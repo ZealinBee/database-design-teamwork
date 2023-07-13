@@ -5,7 +5,7 @@
 -- SELECT * FROM get_all_categories('category', 'category_name', 'ASC', 'category_name', 'Shoes', 0, 10)  -- This will return the categories with category_name = 'Shoes' and sort by category_name
 -- SELECT * FROM get_all_categories('category', 'category_name', 'ASC', NULL, NULL, 0, 5) -- This will return all categories and sort by category_name and limit the result to 5
 
-CREATE OR REPLACE FUNCTION get_all_categories(
+CREATE OR REPLACE FUNCTION ecommerce.get_all_categories(
     _table_name TEXT,
     _sort_column TEXT DEFAULT 'category_id',
     _sort_order TEXT DEFAULT 'ASC',

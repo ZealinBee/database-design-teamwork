@@ -3,7 +3,7 @@
 -- Test the below function by:
 -- SELECT * FROM get_all_inventory('inventory', 'product_id', 'ASC', 'product_id', '1', 0, 10);  -- This will return the inventory with product_id = 1
 
-CREATE OR REPLACE FUNCTION get_all_inventory(
+CREATE OR REPLACE FUNCTION ecommerce.get_all_inventory(
     _table_name TEXT,
     _sort_column TEXT DEFAULT 'product_id',
     _sort_order TEXT DEFAULT 'ASC',
