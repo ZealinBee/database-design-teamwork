@@ -11,7 +11,7 @@ BEGIN
     ELSE
         INSERT INTO ecommerce.review(user_id, product_id, review_text, created_at)
         VALUES (userId, productId, reviewText, CURRENT_DATE);
-        RETURNS TRUE;
+        RETURN TRUE;
     END IF;
 END;
 $$
